@@ -3,7 +3,7 @@
 [configuration]
 
 entry_symbol = "mathorm_library_init"
-compatibility_minimum = 4.1
+compatibility_minimum = 4.2
 
 [libraries]
 
