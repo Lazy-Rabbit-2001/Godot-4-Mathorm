@@ -16,7 +16,7 @@ git submodule add <the_link_of_this_repo> ./gdextension/mathorm
 
 # Requirements
 ## Supported Godot Versions
-4.1 or above
+4.2 or above
 
 ## Supported developing platforms
 Windows 10, 11 x86-64
