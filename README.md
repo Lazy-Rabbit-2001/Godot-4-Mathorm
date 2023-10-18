@@ -3,10 +3,9 @@
 A GDExtension-based math library, and some of gdextensions needs this as dependency
 
 # How to Install?
-1. Download the zip file from the "release" tab
+1. Clone the repo to any folders and copy the `gdextension` folder
 2. Go into the directory of your project where a `project.godot` exists
-3. Unzip the zip and drag and drop the file to the directory
-4. Reload the project
+3. Paste the folder you just copied to the directory
 
 ## How it Works
 `Mathorm` is a self-made word blended from "Math" and "storm", which is a mathlib and contains set of `RefCounted` classes that you can use for enormous and frequent calculations in GDScript.
