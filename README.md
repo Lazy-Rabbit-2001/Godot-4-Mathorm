@@ -3,19 +3,11 @@
 A GDExtension-based math library, and some of gdextensions needs this as dependency
 
 # How to Install?
-1. Go into the directory of your project where a `project.godot` exists
-2. Right click and run **"Open Git Bash Here"**
-3. According to the situation listed below, choose the matching one method to finish the installation
-## Project NOT AS a Git Repo
-```
-git clone <the_link_of_this_repo> ./gdextension/mathorm
-```
-## Project AS a Git Repo
-```
-git submodule add <the_link_of_this_repo> ./gdextension/mathorm
-```
+1. Clone the repo to any folders and copy the `gdextension` folder
+2. Go into the directory of your project where a `project.godot` exists
+3. Paste the folder you just copied to the directory
 
-## How it Works
+# How it Works
 `Mathorm` is a self-made word blended from "Math" and "storm", which is a mathlib and contains set of `RefCounted` classes that you can use for enormous and frequent calculations in GDScript.
 
 ### Calculus
@@ -36,7 +28,3 @@ More classes methods will be implemented in the future
 
 ## Supported developing platforms
 Windows 10, 11 x86-64
-
-# Source Code
-## How to Get it?
-It's in `src.zip` in the main page, and you can unpack it to get the source code
