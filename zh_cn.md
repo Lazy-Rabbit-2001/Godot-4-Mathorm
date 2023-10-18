@@ -3,17 +3,10 @@
 基于GDExtension而开发的数学库，同时也是部分GDExtension的前置扩展
 
 # 安装
-1. 打开你的游戏工程文件所在目录（即project.godot文件所在目录）
-2. 右键空白处，点击"Open Git Bash Here"
-3. 从下列两种情况中，根据自己实际情况，选择一种安装方法并对应输入命令
-## 非Git Repo工程
-```
-git clone <the_link_of_this_repo> ./gdextension/mathorm
-```
-## Git Repo工程
-```
-git submodule add <the_link_of_this_repo> ./gdextension/mathorm
-```
+1. 从右侧“release”面板处下载zip文件
+2. 打开你的游戏工程文件所在目录（即project.godot文件所在目录）
+3. 右键空白处，点击"Open Git Bash Here"
+4. 将zip文件解压，并将其中的文件夹拖拽到该目录内即可
 
 ## 简介
 `Mathorm`一词为本人自造词，由"Math"和"storm"二词拼缀而来。`Mathorm`继承自`RefCounted`类，为GDScript中部分高频超量计算提供优化版本的数学库计算
