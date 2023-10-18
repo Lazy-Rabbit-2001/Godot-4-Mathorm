@@ -1,0 +1,10 @@
+[configuration]
+
+entry_symbol = "mathorm_library_init"
+compatibility_minimum = 4.2
+
+
+[libraries]
+
+windows.x86_64 = "mathorm_datalib.windows.template_release.x86_64.dll"
+linux.x86_64 = "libmathorm_datalib.linux.template_release.x86_64.dll"
