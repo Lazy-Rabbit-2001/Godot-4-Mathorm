@@ -22,7 +22,7 @@ void initialize_mathorm_module(ModuleInitializationLevel p_level) {
 
 	ClassDB::register_class<Calculus>();
 	ClassDB::register_class<Ellipse>();
-	ClassDB::register_class<Vec2D>();
+	ClassDB::register_class<Transform2DAlgo>();
 }
 
 void uninitialize_mathorm_module(ModuleInitializationLevel p_level) {

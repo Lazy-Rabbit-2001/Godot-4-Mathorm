@@ -29,15 +29,16 @@ public:
 };
 
 
-// Vector2D
-class Vec2D : public RefCounted {
-    GDCLASS(Vec2D, RefCounted)
+// Transform2DAlgo
+class Transform2DAlgo : public RefCounted {
+    GDCLASS(Transform2DAlgo, RefCounted)
 
 protected:
     static void _bind_methods();
 
 public:
     static Vector2 get_projection_limit(const Vector2 &vector, const Vector2 &onto, const double length);
+    static int get_direction_to_regardless_transform(const Vector2 &origin, const Vector2 &target, const Transform2D &trans, int index = 0);
 };
 
 

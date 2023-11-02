@@ -66,13 +66,14 @@ double Calculus::get_legendre_elliptic_ii(const double top, const double k, cons
 }
 
     
-// Vector2D
-void Vec2D::_bind_methods() {
+// Transform2DAlgo
+void Transform2DAlgo::_bind_methods() {
     // Register methods
-    ClassDB::bind_static_method("Vec2D", D_METHOD("get_projection_limit", "vector", "onto", "length"), &Vec2D::get_projection_limit);
+    ClassDB::bind_static_method("Transform2DAlgo", D_METHOD("get_projection_limit", "vector", "onto", "length"), &Transform2DAlgo::get_projection_limit);
+    ClassDB::bind_static_method("Transform2DAlgo", D_METHOD("get_direction_to_regardless_transform", "origin", "target", "trans", "index"), &Transform2DAlgo::get_direction_to_regardless_transform, 0);
 }
 
-Vector2 Vec2D::get_projection_limit(const Vector2 &vector, const Vector2 &onto, const double length) {
+Vector2 Transform2DAlgo::get_projection_limit(const Vector2 &vector, const Vector2 &onto, const double length) {
     double dot = vector.dot(onto);
     if (dot < 0 || UtilityFunctions::is_zero_approx(UtilityFunctions::snappedf(dot, 0.001))) {
         return vector;
@@ -82,6 +83,17 @@ Vector2 Vec2D::get_projection_limit(const Vector2 &vector, const Vector2 &onto, 
     Vector2 d = v - v.limit_length(length);
 
     return double(v.length_squared()) > pow(length, 2.0) ? vector - d : vector;
+}
+
+int Transform2DAlgo::get_direction_to_regardless_transform(const Vector2 &origin, const Vector2 &target, const Transform2D &trans, int index) {
+    Transform2D atr = trans.affine_inverse();
+    
+    index = UtilityFunctions::clampi(index, 0, 1);
+
+    double ori = atr.basis_xform(origin)[index];
+    double tgt = atr.basis_xform(target)[index];
+
+    return UtilityFunctions::signi(tgt - ori);
 }
 
 
