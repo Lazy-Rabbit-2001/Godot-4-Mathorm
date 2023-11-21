@@ -1,6 +1,6 @@
 **English(current)** | [中文版](zh_cn.md)
 # Godot 4 Mathorm
-A GDExtension-based math library, and some of gdextensions needs this as dependency
+A GDExtension-based math library, and some of gdextensions needs this as dependency before their development of those gdextensions.
 
 # How to Install?
 1. Clone the repo to any folders and copy the `gdextension` folder
