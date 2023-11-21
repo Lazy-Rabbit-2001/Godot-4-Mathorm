@@ -1,6 +1,6 @@
 [English](README.md) | **中文版（当前页面）**
 # Godot 4 Mathorm
-基于GDExtension而开发的数学库，同时也是部分GDExtension的前置扩展
+基于GDExtension而开发的数学库，同时也是部分GDExtension的开发前置
 
 # 安装
 1. 将本工程克隆到任意文件夹下，复制其中的`gdextension`文件夹
