@@ -71,21 +71,21 @@ double Calculus::get_legendre_elliptic_ii(const double top, const double k, cons
 // Transform2DAlgo
 void Transform2DAlgo::_bind_methods()
 {
-    ClassDB::bind_static_method("Transform2DAlgo", D_METHOD("accurate_rotate", "vector", "angle"), &Transform2DAlgo::accurate_rotate);
+    ClassDB::bind_static_method("Transform2DAlgo", D_METHOD("accurate_vector", "vector"), &Transform2DAlgo::accurate_vector);
     ClassDB::bind_static_method("Transform2DAlgo", D_METHOD("get_projection_limit", "vector", "onto", "length"), &Transform2DAlgo::get_projection_limit);
     ClassDB::bind_static_method("Transform2DAlgo", D_METHOD("get_direction_to_regardless_transform", "origin", "target", "trans", "index"), &Transform2DAlgo::get_direction_to_regardless_transform, 0);
 }
 
-Vector2 Transform2DAlgo::accurate_rotate(const Vector2 &vector, const double angle)
+Vector2 Transform2DAlgo::accurate_vector(const Vector2 &vector)
 {
-    Vector2 rv = vector.rotated(angle);
-    if (UtilityFunctions::is_zero_approx(rv.x)) {
-        rv.x = 0.0;
+    Vector2 vec = vector;
+    if (UtilityFunctions::is_zero_approx(vec.x)) {
+        vec.x = 0.0;
     }
-    if (UtilityFunctions::is_zero_approx(rv.y)) {
-        rv.y = 0.0;
+    if (UtilityFunctions::is_zero_approx(vec.y)) {
+        vec.y = 0.0;
     }
-    return rv;
+    return vec;
 }
 
 Vector2 Transform2DAlgo::get_projection_limit(const Vector2 &vector, const Vector2 &onto, const double length)
