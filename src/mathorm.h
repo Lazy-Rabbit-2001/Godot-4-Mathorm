@@ -37,6 +37,7 @@ protected:
     static void _bind_methods();
 
 public:
+    static Vector2 accurate_rotate(const Vector2 &vector, const double angle);
     static Vector2 get_projection_limit(const Vector2 &vector, const Vector2 &onto, const double length);
     static int get_direction_to_regardless_transform(const Vector2 &origin, const Vector2 &target, const Transform2D &trans, int index = 0);
 };
