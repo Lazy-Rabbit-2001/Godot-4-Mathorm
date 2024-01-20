@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GD_MATHORM
+#define GD_MATHORM
 
 #include <godot_cpp/classes/ref_counted.hpp>
 #include <godot_cpp/core/defs.hpp>
@@ -78,5 +79,4 @@ public:
     double get_rotation() const;
 };
 
-
-
+#endif
