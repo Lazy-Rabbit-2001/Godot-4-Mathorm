@@ -136,6 +136,7 @@ void Ellipse::_bind_methods()
     ClassDB::bind_method(D_METHOD("get_ellipse_area"), &Ellipse::get_ellipse_area);
     ClassDB::bind_method(D_METHOD("get_circumference"), &Ellipse::get_circumference);
     ClassDB::bind_method(D_METHOD("get_circumference_accurate", "samples"), &Ellipse::get_circumference_accurate, Calculus::CALCULUS_SAMPLES);
+    ClassDB::bind_method(D_METHOD("get_point", "phase"), &Ellipse::get_point);
 }
 
 Ellipse::Ellipse(Vector2 center, Vector2 amplitude, double rotation)
